@@ -148,6 +148,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64c9a2f2eef217c45ae6251594eadfbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnPipes
+  pipeSpawnRate: 10
+  pipePrefab: {fileID: 8112506800609100502, guid: 4cb69c3a5ac65c44ca03715db5120afa, type: 3}
 --- !u!4 &741318668
 Transform:
   m_ObjectHideFlags: 0
