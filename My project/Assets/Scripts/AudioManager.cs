@@ -21,6 +21,4 @@ public class AudioManager : MonoBehaviour
     {
         pointsGainedAudio.Play();
     }
-
-
 }

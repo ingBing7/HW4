@@ -20,7 +20,7 @@ public class SpawnPipes : MonoBehaviour
         {
             pipeSpawnRate -= Time.deltaTime;
 
-            Vector2 spawnLocation = new Vector2(4f, Random.Range(-3f, -1f));
+            Vector2 spawnLocation = new Vector2(4f, Random.Range(-5.5f, -1f));
 
             if (pipeSpawnRate <= 0)
             {
