@@ -1,16 +1,29 @@
 using UnityEngine;
-
+using TMPro;
 public class UpdateUI : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public TextMeshProUGUI scoreCounter;
+
+    public GameObject itsGameOverMan;
+
+    public float currentScore = 0f;
+
+    private void Start()
     {
-        
+        Locator.Instance.Player.BirdScored += UpdateScoreUI;
+        Locator.Instance.Player.BirdDied += EnableGameOverScreen;
+        scoreCounter.text = currentScore.ToString();
+    }
+    
+    public void UpdateScoreUI()
+    {
+        currentScore++;
+        scoreCounter.text = currentScore.ToString();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void EnableGameOverScreen()
     {
-        
+        itsGameOverMan.SetActive(true);
     }
+
 }

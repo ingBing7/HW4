@@ -4,17 +4,22 @@ public class AudioManager : MonoBehaviour
 {
     public AudioSource jumpSound;
 
-    public Locator locator;
+    public AudioSource pointsGainedAudio;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        locator.Player.BirdJumped += PlayJumpAudio;
+        Locator.Instance.Player.BirdJumped += PlayJumpAudio;
+        Locator.Instance.Player.BirdScored += PlayPassedPipeAudio;
     }
 
     public void PlayJumpAudio()
     {
         jumpSound.Play();
+    }
+
+    public void PlayPassedPipeAudio()
+    {
+        pointsGainedAudio.Play();
     }
 
 

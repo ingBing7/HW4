@@ -6,6 +6,8 @@ TagManager:
   tags:
   - KillBox
   - PointsCollider
+  - Locator
+  - PipeKillBox
   layers:
   - Default
   - TransparentFX

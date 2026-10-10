@@ -8,4 +8,12 @@ public class PipeMovement : MonoBehaviour
     {
         transform.Translate(Vector2.left * speed * Time.deltaTime);
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.gameObject.CompareTag("PipeKillBox"))
+        {
+            Destroy(gameObject);
+        }
+    }
 }
